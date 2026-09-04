@@ -1,0 +1,25 @@
+{
+  "name": "luggage-belt-jam",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "cap:sync": "cap sync"
+  },
+  "devDependencies": {
+    "@types/howler": "^2.2.13",
+    "playwright": "^1.62.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "@capacitor/cli": "^8.5.1",
+    "@capacitor/core": "^8.5.1",
+    "@tweenjs/tween.js": "^25.0.0",
+    "howler": "^2.2.4",
+    "pixi.js": "^8.20.1"
+  }
+}

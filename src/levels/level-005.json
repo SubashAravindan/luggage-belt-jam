@@ -1,0 +1,18 @@
+{
+  "id": "level-005",
+  "colors": ["red", "blue", "green", "yellow"],
+  "carts": [
+    { "id": "l5-blue-s", "color": "blue", "capacity": 2, "row": 0, "col": 0 },
+    { "id": "l5-blue-b", "color": "blue", "capacity": 4, "row": 1, "col": 3 },
+    { "id": "l5-red-a", "color": "red", "capacity": 3, "row": 1, "col": 1 },
+    { "id": "l5-green-a", "color": "green", "capacity": 3, "row": 1, "col": 2 },
+    { "id": "l5-yellow-a", "color": "yellow", "capacity": 3, "row": 1, "col": 0 }
+  ],
+  "queueA": ["blue", "red", "yellow", "green", "red", "yellow", "blue", "blue"],
+  "queueB": ["blue", "green", "red", "yellow", "green", "blue", "blue"],
+  "bays": 3,
+  "exit": "right",
+  "hint": "Two BLUE carts (2 vs 4)! The first BLUE pair is small - send the 2-cap first!",
+  "parMoves": 5,
+  "design": "L5 capacity-choice DUAL (ring OFF, spatial lot exit right). Lot: BLUE-s front (0,0) opener + backs RED-a (1,1) GREEN-a (1,2) BLUE-b (1,3) reachable; YELLOW-a (1,0) behind BLUE-s same-col blocked until BLUE-s (early unlock, stays for middle). Totals B6/R3/G3/Y3 global, first A B + B B (BLUE-s) reachable. Intended par 5: 2-cap BLUE-s takes opener B/B (dual 2, departs); RED+GREEN+YELLOW share 3 bays through interleave; 4-cap BLUE-b takes tail B2+B2 (dual 4). Greedy-death prefix [blue-s, blue-b, red-a, green-a]: dumb parks 4-cap second (reachable trap) stranding 2/4 idler; middle needs all 3 bays, fronts Y/Y vs partials, bays full -> jam. Proof: solvable 5 [blue-s,red-a,green-a,yellow-a,blue-b], dumb JAM/4, colormatch WIN/5."
+}

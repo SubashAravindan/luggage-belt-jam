@@ -1,0 +1,17 @@
+{
+  "id": "level-006",
+  "colors": ["red", "blue", "green"],
+  "carts": [
+    { "id": "l6-blue-b", "color": "blue", "capacity": 3, "row": 1, "col": 3 },
+    { "id": "l6-blue-junk", "color": "blue", "capacity": 2, "row": 0, "col": 2 },
+    { "id": "l6-red-a", "color": "red", "capacity": 3, "row": 1, "col": 0 },
+    { "id": "l6-green-a", "color": "green", "capacity": 3, "row": 1, "col": 2 }
+  ],
+  "queueA": ["blue", "red", "red", "red", "blue", "blue"],
+  "queueB": ["blue", "green", "green", "green", "blue"],
+  "bays": 3,
+  "exit": "right",
+  "hint": "GREEN is blocked by BLUE junk - park the small BLUE cart FIRST to clear its path!",
+  "parMoves": 4,
+  "design": "L6 sacrifice DUAL (ring OFF, spatial lot exit right). Lot: JUNK front (0,2) + GREEN back (1,2) same-col (GREEN blocked until JUNK dispatched); BIG BLUE back (1,3) + RED back (1,0) reachable; reachable initially JUNK + BIG (both BLUE). Totals B5/R3/G3 global, first A B + B B reachable (JUNK/BIG). Intended par 4: JUNK takes opener B/B (dual 2, departs, unlocks GREEN); RED+GREEN run; BIG closes tail B/B. Greedy-death (legacy blockedBy depart-unlock): prefix [blue-b, red-a] fed opener to 2/3 partial with GREEN locked until JUNK departs -> jam; with spatial dispatch-unlock GREEN frees on JUNK dispatch (not depart), so bays 3 always free in time (RED 3/3 departs) and any order wins in par 4. Proof: solvable 4 [blue-junk,red-a,green-a,blue-b], dumb WIN/4, colormatch WIN/4 (easy; exhaustive 0 layouts trap with bays 3 + dispatch-unlock)."
+}

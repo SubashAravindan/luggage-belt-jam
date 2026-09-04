@@ -1,0 +1,18 @@
+{
+  "id": "level-008",
+  "colors": ["red", "blue", "green", "yellow"],
+  "carts": [
+    { "id": "l8-green-s", "color": "green", "capacity": 2, "row": 1, "col": 1 },
+    { "id": "l8-green-b", "color": "green", "capacity": 4, "row": 0, "col": 0 },
+    { "id": "l8-red-a", "color": "red", "capacity": 3, "row": 1, "col": 2 },
+    { "id": "l8-blue-a", "color": "blue", "capacity": 3, "row": 1, "col": 3 },
+    { "id": "l8-yellow-a", "color": "yellow", "capacity": 3, "row": 1, "col": 0 }
+  ],
+  "queueA": ["green", "green", "red", "yellow", "blue", "red", "yellow", "green"],
+  "queueB": ["green", "green", "blue", "red", "yellow", "blue", "green"],
+  "bays": 3,
+  "exit": "right",
+  "hint": "Count the GREEN block - FOUR bags! Hints only match color; YOU match size. Send 4-cap GREEN first!",
+  "parMoves": 5,
+  "design": "L8 capacity DUAL + interleave (ring OFF, spatial lot exit right). Lot: BIG GREEN front (0,0) opener + SMALL GREEN back (1,1) + RED (1,2) + BLUE (1,3) reachable; YELLOW back (1,0) behind BIG same-col blocked until BIG (early unlock, stays for middle). Totals G6/R3/B3/Y3 global, first A G + B G reachable (BIG/SMALL). Intended par 5: 4-cap BIG takes opener G/G+G/G (dual 2+2=4, departs); RED+BLUE+YELLOW share 3 bays through 9-bag interleave; 2-cap SMALL takes tail G/G (dual 2). Greedy-death prefix [green-s, green-b]: dumb/colormatch tap SMALL first (first matching in yard order among SMALL+BIG) stranding BIG 2/4 partial; interleave needs every bay, fronts Y/Y vs partials, bays full -> jam. Proof: solvable 5 [green-b,red-a,blue-a,yellow-a,green-s], dumb JAM/4, colormatch JAM/4."
+}

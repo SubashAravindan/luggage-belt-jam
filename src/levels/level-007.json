@@ -1,0 +1,21 @@
+{
+  "id": "level-007",
+  "colors": ["red", "blue", "green", "yellow"],
+  "carts": [
+    { "id": "l7-red-a", "color": "red", "capacity": 4, "row": 1, "col": 3 },
+    { "id": "l7-blue-a", "color": "blue", "capacity": 4, "row": 1, "col": 0 },
+    { "id": "l7-green-a", "color": "green", "capacity": 4, "row": 1, "col": 1 },
+    { "id": "l7-yellow-a", "color": "yellow", "capacity": 4, "row": 1, "col": 2 },
+    { "id": "l7-red-b", "color": "red", "capacity": 2, "row": 0, "col": 0 },
+    { "id": "l7-blue-b", "color": "blue", "capacity": 2, "row": 0, "col": 1 },
+    { "id": "l7-green-b", "color": "green", "capacity": 2, "row": 0, "col": 2 },
+    { "id": "l7-yellow-b", "color": "yellow", "capacity": 2, "row": 0, "col": 3 }
+  ],
+  "queueA": ["red", "blue", "green", "yellow", "red", "red", "blue", "blue", "green", "green", "blue", "yellow"],
+  "queueB": ["red", "blue", "green", "yellow", "red", "red", "yellow", "blue", "green", "green", "yellow", "yellow"],
+  "bays": 3,
+  "exit": "left",
+  "hint": "Pairs first! Park SMALL (2-cap) carts for the opening pairs; save BIG (4-cap) carts for the closing quads!",
+  "parMoves": 8,
+  "design": "L7 tight bays 3/4 capacity DUAL (ring OFF, spatial lot exit LEFT full 8/8). Lot: SMALL 2-caps front row (0,0..3) R/B/G/Y left-to-right; BIG 4-caps back BLUE (1,0) GREEN (1,1) YELLOW (1,2) RED (1,3) offset (each BIG reachable one step after its left smalls, so second-step reachable = SMALL-BLUE + BIG-BLUE both matching B/B). Totals 6/color global, first R/R (RED-b (0,0) only reachable). Intended par 8: smalls take opening pairs R/R B/B G/G Y/Y (dual 2 each, depart); bigs take closing quads. Greedy-death prefix [red-b, blue-a, blue-b, green-a]: dumb/colormatch pick BIG-BLUE second (first matching in yard order among SMALL-BLUE+BIG-BLUE) stranding 2/4 partials; after 4 parks bays full of partials, fronts stall -> jam. Proof: solvable 8 [red-b,blue-b,green-b,yellow-b,red-a,blue-a,green-a,yellow-a], dumb JAM/4, colormatch JAM/4."
+}

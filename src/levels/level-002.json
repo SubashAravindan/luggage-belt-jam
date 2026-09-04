@@ -1,0 +1,17 @@
+{
+  "id": "level-002",
+  "colors": ["red", "blue", "green"],
+  "carts": [
+    { "id": "l2-red-a", "color": "red", "capacity": 3, "row": 1, "col": 1 },
+    { "id": "l2-blue-a", "color": "blue", "capacity": 3, "row": 1, "col": 2 },
+    { "id": "l2-green-a", "color": "green", "capacity": 3, "row": 0, "col": 0 },
+    { "id": "l2-red-b", "color": "red", "capacity": 3, "row": 1, "col": 0 },
+    { "id": "l2-blue-b", "color": "blue", "capacity": 3, "row": 1, "col": 3 }
+  ],
+  "queueA": ["green", "red", "blue", "red", "blue", "green", "blue", "red", "red", "blue", "blue", "red", "green", "red", "blue"],
+  "bays": 4,
+  "exit": "right",
+  "hint": "Tap the glowing cart - parked carts auto-load the GLOWING bag!",
+  "parMoves": 5,
+  "design": "L2 teach 3 colors + auto-load (tutorial ring ON, single belt, spatial lot exit right). Lot: GREEN front (0,0) opener reachable + backs RED (1,1) BLUE (1,2) BLUE-b (1,3) reachable; RED-b (1,0) behind GREEN same-col blocked until GREEN (free-equivalent, early unlock, stays for late). First bag GREEN reachable. Intended: ring guides GREEN/RED/BLUE, then second RED/BLUE as bays free; 4 bays vs 3 colors spare, par 5. Greedy-death: none (tutorial cannot jam; deliberately parking 4 non-GREEN before GREEN would strand, but dumb picks RED/BLUE/GREEN in time). Proof: solvable 5 [green-a,red-a,blue-a,red-b,blue-b], dumb WIN, colormatch WIN."
+}

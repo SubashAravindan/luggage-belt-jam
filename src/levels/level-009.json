@@ -1,0 +1,18 @@
+{
+  "id": "level-009",
+  "colors": ["red", "blue", "green", "yellow"],
+  "carts": [
+    { "id": "l9-blue-b", "color": "blue", "capacity": 4, "row": 1, "col": 0 },
+    { "id": "l9-red-a", "color": "red", "capacity": 3, "row": 1, "col": 2 },
+    { "id": "l9-blue-junk", "color": "blue", "capacity": 2, "row": 0, "col": 1 },
+    { "id": "l9-green-a", "color": "green", "capacity": 3, "row": 1, "col": 1 },
+    { "id": "l9-yellow-a", "color": "yellow", "capacity": 3, "row": 1, "col": 3 }
+  ],
+  "queueA": ["blue", "red", "blue", "green", "red", "blue", "yellow", "blue"],
+  "queueB": ["blue", "green", "red", "blue", "green", "yellow", "yellow"],
+  "bays": 3,
+  "exit": "left",
+  "hint": "Clear BLUE junk in 2 bags - then run R+G+B with ZERO spare bays. YELLOW last!",
+  "parMoves": 5,
+  "design": "L9 blocker + zero slack DUAL (ring OFF, spatial lot exit LEFT). Lot: JUNK front (0,1) + GREEN back (1,1) same-col (GREEN blocked until JUNK); BIG BLUE back (1,0) reachable trap (needs only (0,0)); RED (1,2) + YELLOW (1,3) blocked until JUNK (early unlock). Reachable initially JUNK + BIG (both BLUE). Totals B6/R3/G3/Y3 global, first A B + B B reachable. Intended par 5: JUNK takes opener B/B (dual 2, departs, unlocks GREEN); RED+GREEN+BIG share 3 bays exactly (zero slack); YELLOW closes last. Greedy-death prefix [blue-b, blue-junk, red-a]: dumb/colormatch park BIG first (first BLUE in yard order among JUNK+BIG) feeding opener to 3/4? partial; R + JUNK fill 3 bays, fronts G/G arrive with bays full -> jam. Proof: solvable 5 [blue-junk,red-a,green-a,blue-b,yellow-a], dumb JAM/3, colormatch JAM/3."
+}

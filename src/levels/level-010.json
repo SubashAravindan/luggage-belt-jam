@@ -1,0 +1,19 @@
+{
+  "id": "level-010",
+  "colors": ["red", "blue", "green", "yellow"],
+  "carts": [
+    { "id": "l10-red-s", "color": "red", "capacity": 2, "row": 1, "col": 0 },
+    { "id": "l10-blue-junk", "color": "blue", "capacity": 2, "row": 0, "col": 2 },
+    { "id": "l10-red-b", "color": "red", "capacity": 4, "row": 0, "col": 3 },
+    { "id": "l10-green-a", "color": "green", "capacity": 4, "row": 1, "col": 2 },
+    { "id": "l10-blue-b", "color": "blue", "capacity": 4, "row": 1, "col": 1 },
+    { "id": "l10-yellow-a", "color": "yellow", "capacity": 4, "row": 1, "col": 3 }
+  ],
+  "queueA": ["blue", "red", "red", "green", "yellow", "yellow", "green", "blue", "yellow", "red"],
+  "queueB": ["blue", "red", "red", "green", "blue", "blue", "green", "blue", "yellow", "red"],
+  "bays": 3,
+  "exit": "left",
+  "hint": "BOSS: burn BLUE junk (2), send BIG RED (4), run G+B+Y with no spare bay, save SMALL RED for last!",
+  "parMoves": 6,
+  "design": "L10 boss DUAL: blocker + capacity + tight bays (ring OFF, spatial lot exit LEFT). Lot: JUNK front (0,2) + GREEN back (1,2) same-col (GREEN blocked until JUNK); BIG RED front (0,3) blocked until JUNK (second); SMALL RED back (1,0) + BIG BLUE back (1,1) reachable traps; YELLOW back (1,3) blocked until JUNK+BIG-RED. Reachable initially JUNK + SMALL + BIG-BLUE. Totals B6/R6/G4/Y4 global, first B/B (JUNK/BIG-BLUE) reachable. Intended par 6: JUNK takes opener B/B (dual 2, unlocks GREEN); BIG RED takes R-block R/R+R/R (dual 4); GREEN+BLUE+YELLOW share 3 bays; SMALL RED closes tail R/R (dual 2). Greedy-death prefix [red-s, blue-junk]: dumb parks SMALL first (first reachable in yard order) stranding 2/2 idler; feeding opener to BIG BLUE locks GREEN timing; any 4th park fills 3 bays with partials, fronts Y/Y vs partials -> jam. Proof: solvable 6 [blue-junk,red-b,green-a,blue-b,yellow-a,red-s], dumb JAM/5, colormatch JAM/5 (starts junk-correct but later greedy wrong)."
+}

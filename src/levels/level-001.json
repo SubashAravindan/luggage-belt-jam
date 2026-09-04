@@ -1,0 +1,16 @@
+{
+  "id": "level-001",
+  "colors": ["red", "blue"],
+  "carts": [
+    { "id": "l1-red-a", "color": "red", "capacity": 3, "row": 1, "col": 3 },
+    { "id": "l1-blue-a", "color": "blue", "capacity": 3, "row": 1, "col": 2 },
+    { "id": "l1-red-b", "color": "red", "capacity": 3, "row": 1, "col": 1 },
+    { "id": "l1-blue-b", "color": "blue", "capacity": 3, "row": 1, "col": 0 }
+  ],
+  "queueA": ["red", "red", "blue", "blue", "red", "red", "blue", "blue", "red", "blue", "red", "blue"],
+  "bays": 4,
+  "exit": "right",
+  "hint": "Tap the glowing cart to park it in a bay!",
+  "parMoves": 4,
+  "design": "L1 teach tap-to-park (tutorial ring ON, single belt, spatial lot exit right, all back-row front-empty so all reachable = free dispatch). Intended: follow the ring; 4 bays hold all 4 carts so any order wins in par 4. Trap: none — this level cannot be lost. Proof: solvable 4, dumb WIN, colormatch WIN."
+}

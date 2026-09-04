@@ -1,0 +1,16 @@
+{
+  "id": "level-003",
+  "colors": ["red", "blue", "green"],
+  "carts": [
+    { "id": "l3-red-a", "color": "red", "capacity": 3, "row": 0, "col": 0 },
+    { "id": "l3-blue-a", "color": "blue", "capacity": 3, "row": 0, "col": 1 },
+    { "id": "l3-green-a", "color": "green", "capacity": 3, "row": 1, "col": 3 },
+    { "id": "l3-red-b", "color": "red", "capacity": 3, "row": 0, "col": 2 }
+  ],
+  "queueA": ["red", "blue", "red", "blue", "red", "blue", "green", "green", "green", "red", "red", "red"],
+  "bays": 2,
+  "exit": "right",
+  "hint": "GREEN arrives late - park RED+BLUE first, save your 2 bays!",
+  "parMoves": 4,
+  "design": "L3 lookahead debut (ring OFF, single belt, spatial lot exit right). Lot: RED-a (0,0) RED-b (0,2) BLUE-a (0,1) fronts + GREEN-a back (1,3); reachable initially RED-b + GREEN-a (RED-a/BLUE-a need exit-ward (0,2)/(0,3) blocked). First bag RED reachable (RED-b). Intended par 4: RED-b + BLUE-a take 6-bag R/B alternation, RED-a cycles as bays free, GREEN-a closes GGG + tail RRR. Greedy-death prefix [green-a, red-b]: dumb parks GREEN first (reachable idle 0/3, blocks BLUE-a exit-ward) then RED-b fills 2 bays; BLUE third needs 3rd bay (GREEN idle + RED-b 1/3 partial, no departs) with fronts B vs no loader -> jam. Proof: solvable 4 [red-b,blue-a,red-a,green-a], dumb JAM/2, colormatch WIN/4 (front-R picks RED-b first, avoids GREEN)."
+}

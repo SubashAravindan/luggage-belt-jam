@@ -1,0 +1,18 @@
+{
+  "id": "level-004",
+  "colors": ["red", "blue", "green"],
+  "carts": [
+    { "id": "l4-red-a", "color": "red", "capacity": 4, "row": 0, "col": 0 },
+    { "id": "l4-blue-a", "color": "blue", "capacity": 4, "row": 1, "col": 1 },
+    { "id": "l4-green-a", "color": "green", "capacity": 4, "row": 1, "col": 2 },
+    { "id": "l4-red-b", "color": "red", "capacity": 2, "row": 1, "col": 3 },
+    { "id": "l4-blue-b", "color": "blue", "capacity": 2, "row": 1, "col": 0 }
+  ],
+  "queueA": ["red", "red", "red", "red", "blue", "blue", "green", "green"],
+  "queueB": ["blue", "blue", "blue", "blue", "red", "red", "green", "green"],
+  "bays": 2,
+  "exit": "right",
+  "hint": "GREEN sleeps in - feed RED+BLUE pairs, cycle second carts as bays free!",
+  "parMoves": 5,
+  "design": "L4 lookahead DUAL (ring OFF, tight 2 bays, spatial lot exit right). Lot: RED-a front (0,0) opener + backs BLUE-a (1,1) GREEN-a (1,2) RED-b (1,3) reachable; BLUE-b (1,0) behind RED-a same-col blocked until RED-a (early unlock, stays for middle). Totals R6/B6/G4 global, first A R (RED-a) + B B (BLUE-a) reachable. Intended par 5: RED-a+BLUE-a take opening 4-blocks (dual), RED-b+BLUE-b take middle 2s, GREEN-a takes tail G2+G2 (dual 4). Greedy-death prefix [red-a, blue-a, green-a, red-b]: dumb parks GREEN third early (reachable trap); prefix fills 2 bays with GREEN 2/4 + RED-b 0/2 partials, fronts drain with no loader -> jam. Proof: solvable 5 [red-a,blue-a,red-b,blue-b,green-a], dumb JAM/4, colormatch WIN/5 (needier avoids GREEN early)."
+}
